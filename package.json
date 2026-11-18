@@ -1,0 +1,60 @@
+{
+  "name": "dsh-logout-button",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness Web 插件的「退出登录」按钮：服务端删掉 dsh-auth-* 与站点 cookie，再刷新就回到 401，方便在共享电脑上用完后一键退出。Logout button for DSH Web — clears the persistent browser-session cookie server-side so the next page load hits the 401 gate again.",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-web",
+    "logout",
+    "sign-out",
+    "cookie",
+    "退出登录",
+    "退出"
+  ],
+  "author": {
+    "name": "ramwin",
+    "email": "ramwin@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramwin/dsh-logout-button.git"
+  },
+  "homepage": "https://github.com/ramwin/dsh-logout-button#readme",
+  "bugs": {
+    "url": "https://github.com/ramwin/dsh-logout-button/issues"
+  }
+}

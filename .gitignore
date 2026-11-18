@@ -1,0 +1,5 @@
+node_modules/
+*.bak-*
+# 全局 gitignore 会忽略 lib/；本包的发现在 lib/ 里，必须显式放开。
+!lib/
+!lib/**
